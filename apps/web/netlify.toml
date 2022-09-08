@@ -1,0 +1,11 @@
+[build]
+  base = ""
+  command = "npx pnpm install --store=node_modules/.pnpm-store && pnpm -w run build"
+  publish = "build/"
+
+[build.environment]
+  NPM_FLAGS = "--version"
+
+[functions]
+  directory = "netlify/functions/"
+  node_bundler = "esbuild"
